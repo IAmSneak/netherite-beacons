@@ -1,7 +1,7 @@
 package com.gmail.sneakdevs.netheritebeacons.mixin;
 
 import com.gmail.sneakdevs.netheritebeacons.NetheriteBeacons;
-import com.gmail.sneakdevs.netheritebeacons.config.NBConfig;
+import com.gmail.sneakdevs.netheritebeacons.config.NetheriteBeaconsConfig;
 import me.shedaniel.autoconfig.AutoConfig;
 import net.minecraft.block.entity.BeaconBlockEntity;
 import net.minecraft.entity.effect.StatusEffect;
@@ -14,10 +14,10 @@ import org.spongepowered.asm.mixin.injection.Constant;
 import org.spongepowered.asm.mixin.injection.ModifyConstant;
 
 @Mixin(BeaconBlockEntity.class)
-public class MixinBeaconBlockEntity {
+public class MixinBeaconBlockEntity_NetheriteBeacons {
     @ModifyConstant(method = "applyPlayerEffects", constant = @Constant(intValue = 1))
     private static int netheritebeacon_newEffect(int original, World world, BlockPos pos, int beaconLevel, @Nullable StatusEffect primaryEffect, @Nullable StatusEffect secondaryEffect) {
-        float bonus = NBConfig.getBonus(primaryEffect);
+        float bonus = NetheriteBeaconsConfig.getBonus(primaryEffect);
         if (bonus > 0) {
             return (int) Math.max(1, NetheriteBeacons.getNetheriteCount(world, pos) * bonus);
         }
@@ -25,7 +25,7 @@ public class MixinBeaconBlockEntity {
     }
     @ModifyConstant(method = "applyPlayerEffects", constant = @Constant(intValue = 0, ordinal = 1))
     private static int netheritebeacon_newRegen(int original, World world, BlockPos pos, int beaconLevel, @Nullable StatusEffect primaryEffect, @Nullable StatusEffect secondaryEffect) {
-        float bonus = AutoConfig.getConfigHolder(NBConfig.class).getConfig().regenerationBonus;
+        float bonus = AutoConfig.getConfigHolder(NetheriteBeaconsConfig.class).getConfig().regenerationBonus;
         if (bonus > 0 && secondaryEffect == StatusEffects.REGENERATION) {
             return (int) Math.max(0, NetheriteBeacons.getNetheriteCount(world, pos) * bonus);
         }

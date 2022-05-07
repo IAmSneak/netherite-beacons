@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "id": "netheritebeacon",
+  "id": "netheritebeacons",
   "version": "${version}",
 
   "name": "Netherite Beacons",
@@ -12,12 +12,12 @@
   },
 
   "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
+  "icon": "assets/netheritebeacons/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "com.gmail.sneakdevs.netheritebeacons.NetheriteBeacons"
+      "com.gmail.sneakdevs.netheritebeaconsfabric.NetheriteBeaconsFabric"
     ]
   },
   "mixins": [

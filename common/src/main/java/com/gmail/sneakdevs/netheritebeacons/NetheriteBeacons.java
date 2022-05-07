@@ -1,6 +1,6 @@
 package com.gmail.sneakdevs.netheritebeacons;
 
-import com.gmail.sneakdevs.netheritebeacons.config.NBConfig;
+import com.gmail.sneakdevs.netheritebeacons.config.NetheriteBeaconsConfig;
 import me.shedaniel.autoconfig.AutoConfig;
 import me.shedaniel.autoconfig.serializer.Toml4jConfigSerializer;
 import net.fabricmc.api.ModInitializer;
@@ -13,7 +13,7 @@ public class NetheriteBeacons implements  ModInitializer {
 
     @Override
     public void onInitialize() {
-        AutoConfig.register(NBConfig.class, Toml4jConfigSerializer::new);
+        AutoConfig.register(NetheriteBeaconsConfig.class, Toml4jConfigSerializer::new);
     }
 
     public static int getNetheriteCount(World world, BlockPos pos) {

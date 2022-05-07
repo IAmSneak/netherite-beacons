@@ -1,0 +1,35 @@
+modLoader = "javafml"
+loaderVersion = "[40,)"
+#issueTrackerURL = ""
+license = "MIT"
+
+[[mods]]
+modId = "netheritebeacons"
+version = "${version}"
+displayName = "Netherite Beacons"
+authors = "IAmSneak"
+description = '''
+Gives netherite blocks a use in beacons
+'''
+logoFile = "icon.png"
+
+[[dependencies.netheritebeacons]]
+modId = "forge"
+mandatory = true
+versionRange = "[40,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.netheritebeacons]]
+modId = "minecraft"
+mandatory = true
+versionRange = "[1.18.2,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.netheritebeacons]]
+modId = "cloth-config2"
+mandatory = true
+versionRange = "[6.2.57,)"
+ordering = "NONE"
+side = "BOTH"

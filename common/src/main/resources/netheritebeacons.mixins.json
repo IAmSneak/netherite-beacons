@@ -4,7 +4,7 @@
   "package": "com.gmail.sneakdevs.netheritebeacons.mixin",
   "compatibilityLevel": "JAVA_16",
   "mixins": [
-    "MixinBeaconBlockEntity"
+    "MixinBeaconBlockEntity_NetheriteBeacons"
   ],
   "client": [
   ],
