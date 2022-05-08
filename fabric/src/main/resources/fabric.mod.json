@@ -16,7 +16,7 @@
 
   "environment": "*",
   "entrypoints": {
-    "main": [
+    "server": [
       "com.gmail.sneakdevs.netheritebeaconsfabric.NetheriteBeaconsFabric"
     ]
   },

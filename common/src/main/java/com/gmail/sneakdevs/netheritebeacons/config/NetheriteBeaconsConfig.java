@@ -10,16 +10,16 @@ import net.minecraft.entity.effect.StatusEffects;
 @Config(name = "netherite_beacons")
 public class NetheriteBeaconsConfig implements ConfigData {
 
-    @Comment("\n Extra blocks of reach the beacon has for each diamond block in the base (0 for no bonus)")
+    @Comment("Extra blocks of reach the beacon has for each diamond block in the base (0 for no bonus)")
     public int diamondBlocksBeaconReachBonus = 2;
 
-    @Comment("\n Max extra number of blocks diamond blocks can add (-1 to disable)")
+    @Comment("Max extra number of blocks diamond blocks can add (-1 to disable)")
     public int maxBonusReach = -1;
 
-    @Comment("\n Enables/disables the beacon bonuses")
+    @Comment("Enables/disables the beacon bonuses")
     public boolean netheriteBonusEnabled = true;
 
-    @Comment("\n Bonus amount of levels each netherite block gives (0.0 for no bonus)")
+    @Comment("Bonus amount of levels each netherite block gives (0.0 for no bonus)")
     public float hasteBonus = 1.0F;
     public float speedBonus = 0.5F;
     public float resistanceBonus = 0.5F;
@@ -27,7 +27,7 @@ public class NetheriteBeaconsConfig implements ConfigData {
     public float strengthBonus = 0.5F;
     public float regenerationBonus = 0.5F;
 
-    @Comment("\n Max level the beacon effects can be (0-255)")
+    @Comment("Max level the beacon effects can be (0-255)")
     public int maxHasteBonus = 255;
     public int maxSpeedBonus = 7;
     public int maxResistanceBonus = 4;
