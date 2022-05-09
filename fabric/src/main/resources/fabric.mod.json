@@ -6,7 +6,7 @@
   "name": "Netherite Beacons",
   "description": "Gives netherite blocks a use in beacons.",
   "authors": [
-    ""
+    "IAmSneak"
   ],
   "contact": {
   },
@@ -16,7 +16,7 @@
 
   "environment": "*",
   "entrypoints": {
-    "server": [
+    "main": [
       "com.gmail.sneakdevs.netheritebeaconsfabric.NetheriteBeaconsFabric"
     ]
   },

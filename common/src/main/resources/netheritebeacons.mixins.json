@@ -1,6 +1,5 @@
 {
   "required": true,
-  "minVersion": "0.8",
   "package": "com.gmail.sneakdevs.netheritebeacons.mixin",
   "compatibilityLevel": "JAVA_16",
   "mixins": [

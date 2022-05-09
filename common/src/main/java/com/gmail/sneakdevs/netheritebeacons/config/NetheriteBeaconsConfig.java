@@ -13,10 +13,10 @@ public class NetheriteBeaconsConfig implements ConfigData {
     @Comment("Extra blocks of reach the beacon has for each diamond block in the base (0 for no bonus)")
     public int diamondBlocksBeaconReachBonus = 2;
 
-    @Comment("Max extra number of blocks diamond blocks can add (-1 to disable)")
+    @Comment("Max extra blocks of reach diamond blocks can add (-1 for infinite)")
     public int maxBonusReach = -1;
 
-    @Comment("Enables/disables the beacon bonuses")
+    @Comment("Enables/disables the beacon effect bonuses")
     public boolean netheriteBonusEnabled = true;
 
     @Comment("Bonus amount of levels each netherite block gives (0.0 for no bonus)")
@@ -35,37 +35,36 @@ public class NetheriteBeaconsConfig implements ConfigData {
     public int maxStrengthBonus = 4;
     public int maxRegenerationBonus = 3;
 
-    @SuppressWarnings("unused")
     public static NetheriteBeaconsConfig getInstance() {
         return AutoConfig.getConfigHolder(NetheriteBeaconsConfig.class).getConfig();
     }
 
     public static float getBonus(StatusEffect se) {
         if (StatusEffects.HASTE.equals(se)) {
-            return AutoConfig.getConfigHolder(NetheriteBeaconsConfig.class).getConfig().hasteBonus;
+            return NetheriteBeaconsConfig.getInstance().hasteBonus;
         } else if (StatusEffects.SPEED.equals(se)) {
-            return AutoConfig.getConfigHolder(NetheriteBeaconsConfig.class).getConfig().speedBonus;
+            return NetheriteBeaconsConfig.getInstance().speedBonus;
         } else if (StatusEffects.RESISTANCE.equals(se)) {
-            return AutoConfig.getConfigHolder(NetheriteBeaconsConfig.class).getConfig().resistanceBonus;
+            return NetheriteBeaconsConfig.getInstance().resistanceBonus;
         } else if (StatusEffects.JUMP_BOOST.equals(se)) {
-            return AutoConfig.getConfigHolder(NetheriteBeaconsConfig.class).getConfig().jumpBoostBonus;
+            return NetheriteBeaconsConfig.getInstance().jumpBoostBonus;
         } else if (StatusEffects.STRENGTH.equals(se)) {
-            return AutoConfig.getConfigHolder(NetheriteBeaconsConfig.class).getConfig().strengthBonus;
+            return NetheriteBeaconsConfig.getInstance().strengthBonus;
         }
         return 0.5F;
     }
 
     public static int getMaxLevel(StatusEffect se) {
         if (StatusEffects.HASTE.equals(se)) {
-            return AutoConfig.getConfigHolder(NetheriteBeaconsConfig.class).getConfig().maxHasteBonus;
+            return NetheriteBeaconsConfig.getInstance().maxHasteBonus;
         } else if (StatusEffects.SPEED.equals(se)) {
-            return AutoConfig.getConfigHolder(NetheriteBeaconsConfig.class).getConfig().maxSpeedBonus;
+            return NetheriteBeaconsConfig.getInstance().maxSpeedBonus;
         } else if (StatusEffects.RESISTANCE.equals(se)) {
-            return AutoConfig.getConfigHolder(NetheriteBeaconsConfig.class).getConfig().maxResistanceBonus;
+            return NetheriteBeaconsConfig.getInstance().maxResistanceBonus;
         } else if (StatusEffects.JUMP_BOOST.equals(se)) {
-            return AutoConfig.getConfigHolder(NetheriteBeaconsConfig.class).getConfig().maxJumpBoostBonus;
+            return NetheriteBeaconsConfig.getInstance().maxJumpBoostBonus;
         } else if (StatusEffects.STRENGTH.equals(se)) {
-            return AutoConfig.getConfigHolder(NetheriteBeaconsConfig.class).getConfig().maxStrengthBonus;
+            return NetheriteBeaconsConfig.getInstance().maxStrengthBonus;
         }
         return 255;
     }
